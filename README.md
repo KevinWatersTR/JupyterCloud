@@ -2,14 +2,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/waters262/JupyterCloud">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Jupyter Cloud Project</h3>
 
   <p align="center">
-    project_description
+    This project contains Jypter Notebooks for Cloud Environments - Oracle OCI, Azure (planned)
     <br />
     <a href="https://github.com/waters262/JupyterCloud"><strong>Explore the docs »</strong></a>
     <br />
@@ -39,11 +39,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 * [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
@@ -62,18 +57,16 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
-  
-
-
+ 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
+- [] OCI Multi Factor Authorization Notebook
+- [] OCI Bastion Session Manager
+- [] OCI Monitor
+    - [] Function Monitor
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -106,7 +99,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -116,7 +108,3 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-## Github Cloud Notebook
-Provides Git repository reporting
