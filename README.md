@@ -45,6 +45,7 @@ With the skills I learned after using the tool for a while, it became the natura
 * [Jupyter Notebook](https://anaconda.com/)
 * [oracle-cli](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
 * [SDK for Python](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/pythonsdk.htm)
+* [Mathjax](https://mathjax.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
