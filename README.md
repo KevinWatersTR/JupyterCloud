@@ -23,10 +23,21 @@
 </div>
 
 
-# JupyterCloud
-Jupyter Notebooks developed for Cloud Environments
+# Introduction
+
+Jupyter Notebooks developed for Cloud Environments:
+This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.
+For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.
+So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the xxxxx notebook for furhter details.
+
+
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project and Contributer
+
+I started using Jupyter Notebook for Python development several years ago and found that it gave me enjoyment while coding in Python and so became my development platform of choice.
+I first learned about Jupyter when I began looking into quantum computing (IBM's Qiskit) and found a lot of supporting notebooks for the subject.
+
+With the skills I learned after using the tool for a while, it became the natural choice for doing a deep dive into the Oracle Cloud Infrastructure (OCI).  
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -38,7 +49,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
+* [Jupyter Notebook](https://nextjs.org/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
