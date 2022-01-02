@@ -9,12 +9,12 @@
 <h3 align="center">Jupyter Cloud Project</h3>
 
   <p align="center">
-    This project contains Jypter Notebooks for Cloud Environments - Oracle OCI, Azure (planned)
+    This project will use Jupyter Notebooks (python) to explore the internals of the OCI Cloud Environment using the OCI Python SDK (mostly) and some CLI as needed/convienent.
     <br />
     <a href="https://github.com/waters262/JupyterCloud"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/waters262/JupyterCloud">View Demo</a>
+    <a href="https://youtu.be/5VtN99HX3IQ">View Demo</a>
     ·
     <a href="https://github.com/waters262/JupyterCloud/issues">Report Bug</a>
     ·
@@ -26,40 +26,33 @@
 # Introduction
 
 Jupyter Notebooks developed for Cloud Environments:
-This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.
-For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.
+<p>This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.</p>
+<p>For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.</p>
 So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the xxxxx notebook for furhter details.
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project and Contributer
+## About The Project and Background
 
-I started using Jupyter Notebook for Python development several years ago and found that it gave me enjoyment while coding in Python and so became my development platform of choice.
-I first learned about Jupyter when I began looking into quantum computing (IBM's Qiskit) and found a lot of supporting notebooks for the subject.
-
+<p>I started using Jupyter Notebook for Python development several years ago and found that it gave me enjoyment while coding in Python and so became my development platform of choice.</p>
+<p>I first learned about Jupyter when I began looking into quantum computing (IBM's Qiskit) and found a lot of supporting notebooks for the subject.
+</p>
 With the skills I learned after using the tool for a while, it became the natural choice for doing a deep dive into the Oracle Cloud Infrastructure (OCI).  
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
 
-* [Jupyter Notebook](https://nextjs.org/)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Jupyter Notebook](https://anaconda.com/)
+* [oracle-cli](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
+* [SDK for Python](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/pythonsdk.htm)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The obvious requirement for this getting started is to have Jupyter Notebooks installed on your computer.<br>
+I strongly recommend using Anaconda 
 
 ### Prerequisites
 
