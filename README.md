@@ -1,4 +1,13 @@
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -113,3 +122,18 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/waters262/JupyterCloud.svg?style=for-the-badge
+[contributors-url]: https://github.com/waters262/JupyterCloud/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/waters262/JupyterCloud.svg?style=for-the-badge
+[forks-url]: https://github.com/waters262/JupyterCloud/network/members
+[stars-shield]: https://img.shields.io/github/stars/waters262/JupyterCloud.svg?style=for-the-badge
+[stars-url]: https://github.com/waters262/JupyterCloud/stargazers
+[issues-shield]: https://img.shields.io/github/issues/waters262/JupyterCloud.svg?style=for-the-badge
+[issues-url]: https://github.com/waters262/JupyterClous/issues
+[license-shield]: https://img.shields.io/github/license/waters262/JupyterCloud.svg?style=for-the-badge
+[license-url]: https://github.com/waters262/JupyterCloud/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/kevin-waters-b47a8424
+[product-screenshot]: images/screenshot.png
