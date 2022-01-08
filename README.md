@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/waters262/JupyterCloud">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/OCI_Comp_4K_HQ_thumb.gif" alt="Logo" width="200" height="100">
   </a>
 
 <h3 align="center">Jupyter Cloud Project</h3>
