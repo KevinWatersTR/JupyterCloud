@@ -1,4 +1,5 @@
 # Run an oracle cli Command
+import subprocess
 def runCLI(pCommand):
     command=pCommand
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
