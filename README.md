@@ -23,7 +23,7 @@
     <a href="https://github.com/waters262/JupyterCloud"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://youtu.be/5VtN99HX3IQ">View Demo</a>
+    <a href="https://youtu.be/5VtN99HX3IQ">View Demo Video</a>
     ·
     <a href="https://github.com/waters262/JupyterCloud/issues">Report Bug</a>
     ·
@@ -34,20 +34,16 @@
 
 # Introduction
 
-Jupyter Notebooks developed for Cloud Environments:
-<p>This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.</p>
-<p>For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.</p>
-So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the OCI_Auth_Multi_Factor notebook for furhter details.
+Jupyter Notebooks developed for Cloud Environments - OCI:
+<p>The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project and Background
 
 <p>I started using Jupyter Notebook for Python development several years ago and found that it gave me enjoyment while coding in Python and so became my development platform of choice.</p>
-<p>I first learned about Jupyter when I began looking into quantum computing (IBM's Qiskit) and found a lot of supporting notebooks for the subject.
-</p>
-With the skills I learned after using the tool for a while, it became the natural choice for doing a deep dive into the Oracle Cloud Infrastructure (OCI).  
 
+See Roadmap below for what is ready for use and what is now in process
 
 ### Built With
 
@@ -75,10 +71,10 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] OCI Multi Factor Authorization Notebook
-- [] OCI Bastion Session Manager
-- [] OCI Monitor
-    - [] Function Monitor
+- [x] OCI Authentication
+- [ ] OCI Bastion Session Manager
+- [ ] Terraform for Functions
+- [ ] Functions Monitor
 
 See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a full list of proposed features (and known issues).
 
@@ -106,11 +102,18 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@waters262](https://twitter.com/waters262) - waters262@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/waters262/JupyterCloud](https://github.com/waters262/JupyterCloud)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Comments on Project -->
+## Project Comments
+<p>This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.</p>
+<p>For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.</p>
+So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the OCI_Auth_Multi_Factor notebook for furhter details.
+
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -131,7 +134,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [stars-shield]: https://img.shields.io/github/stars/waters262/JupyterCloud.svg?style=for-the-badge
 [stars-url]: https://github.com/waters262/JupyterCloud/stargazers
 [issues-shield]: https://img.shields.io/github/issues/waters262/JupyterCloud.svg?style=for-the-badge
-[issues-url]: https://github.com/waters262/JupyterClous/issues
+[issues-url]: https://github.com/waters262/JupyterCloud/issues
 [license-shield]: https://img.shields.io/github/license/waters262/JupyterCloud.svg?style=for-the-badge
 [license-url]: https://github.com/waters262/JupyterCloud/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
