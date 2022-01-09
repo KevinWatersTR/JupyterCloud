@@ -1,0 +1,11 @@
+{
+  "short_name": "JupyterCloud",
+  "name": "Jupyter Notebooks for Oracle Cloud (OCI)",
+  "icons": [
+    {
+    "src": "/images/logo.gif",
+    "type": "image/gif",
+    "sizes": "200x100"
+    }
+  ]
+}
