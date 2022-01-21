@@ -37,6 +37,10 @@
 Jupyter Notebooks developed for Cloud Environments - OCI:
 <p>The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
 
+## Disclaimer
+<p>
+The opinions and techniques used in this repository are those of the author/contibuters and in no way meant to refelect the best practices and/or options of Oracle Corporation or any other entity.
+  </p>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project and Background
