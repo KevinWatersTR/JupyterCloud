@@ -105,6 +105,21 @@ See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a fu
 >Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. >For users who must access frequently, such as developer, the process can become cumbersome and tedious.
 >The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to >your favorite terminal access tool like MobaXterm.
 
+## References
+
+**Reference Document Links:**<br>
+[OCI CLI Docs](https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html)<br>
+[Python SDK docs](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html)<br>
+[Core Services](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/core.html)<br>
+   <br>
+**Getting Started References**<br>
+[Learn OCI CLI  ](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/OCI_CLI)<br>
+[Learn DevOps Resource Manager](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Resource_Manager)<br>
+[Learn DevOps Terraform](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Terraform)<br>
+[Example Python SDK - showoci](https://github.com/oracle/oci-python-sdk/tree/master/examples/showoci)<br>
+[Learn DevOps Container Registry  ](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Container_Registry) <br>
+
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
