@@ -42,6 +42,20 @@ Jupyter Notebooks developed for Cloud Environments - OCI:
 The opinions and techniques used in this repository are those of the author/contibuters and in no way meant to refelect the best practices and/or options of Oracle Corporation or any other entity.
   </p>
 
+## Featured Notebooks
+
+### Authentication
+<p>This Notebook can best be used to authenticate to OCI tenancy's that require multi-factor authentication of any form. Once authenticated, there are cells in the notebook to quickly refresh your session, which is nice to have since session typically have a time limit. There is also a repeating cell which will keep you session alive for hours, as needed.</p>
+
+### Bastion Ops
+
+
+### Terraform Ops
+<p>This Notebook provides an easy way to quickly create Terraform Stack, Jobs and Templates. Specifically designed for serverless function environments, a cell tool is in this notebook that will get the State of a Stack and transform the output to an organized report format. In addition, the tool will create a Resource Map that can used in a Metric Monitoring notebook this is currently being planned.
+  </p>
+
+
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project and Background
 
