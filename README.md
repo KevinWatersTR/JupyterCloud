@@ -34,8 +34,8 @@
 
 # Introduction
 
-Jupyter Notebooks developed for Cloud Environments - OCI:
-<p>The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
+   <p>Jupyter Notebooks developed for Cloud Environments - current focus is on Oracle Cloud (OCI):</p>
+   <p> The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
 
 ## Disclaimer
 <p>
@@ -45,13 +45,13 @@ The opinions and techniques used in this repository are those of the author/cont
 ## Featured Notebooks
 
 ### Authentication
-<p>This Notebook can best be used to authenticate to OCI tenancy's that require multi-factor authentication of any form. Once authenticated, there are cells in the notebook to quickly refresh your session, which is nice to have since session typically have a time limit. There is also a repeating cell which will keep you session alive for hours, as needed.</p>
+   <p>This Notebook can best be used to authenticate to OCI tenancy's that require multi-factor authentication of any form. Once authenticated, there are cells in the notebook to quickly refresh your session, which is nice to have since session typically have a time limit. There is also a repeating cell which will keep you session alive for hours, as needed.</p>
 
 ### Bastion Ops
-<p> This Notebook is very useful in creating Bastion Session for both Managed Server and Port Forwarding Servers. After a few configurations are made, sessions that ssh strings that are created have all the information needed to simply copy and paste to your xterm access tool. Port Forwarding which provides tunneling to VM servers is also included.</p>
+   <p> This Notebook is very useful in creating Bastion Session for both Managed Server and Port Forwarding Servers. After a few configurations are made, sessions that ssh strings that are created have all the information needed to simply copy and paste to your xterm access tool. Port Forwarding which provides tunneling to VM servers is also included.</p>
 
 ### Terraform Ops
-<p>This Notebook provides an easy way to quickly create Terraform Stack, Jobs and Templates. Specifically designed for serverless function environments, a cell tool is in this notebook that will get the State of a Stack and transform the output to an organized report format. In addition, the tool will create a Resource Map that can used in a Metric Monitoring notebook this is currently being planned.
+   <p>This Notebook provides an easy way to quickly create Terraform Stack, Jobs and Templates. Specifically designed for serverless function environments, a cell tool is in this notebook that will get the State of a Stack and transform the output to an organized report format. In addition, the tool will create a Resource Map that can used in a Metric Monitoring notebook this is currently being planned.
   </p>
 
 
@@ -86,8 +86,8 @@ TBD
 ## Roadmap
 
 - [x] OCI Authentication
-- [ ] OCI Bastion Session Manager
-- [ ] Terraform for Functions
+- [x] OCI Bastion Session Manager
+- [x] Terraform for Functions
 - [ ] Functions Monitor
 
 
@@ -101,9 +101,9 @@ See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a fu
 <p>So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the OCI_Auth_Multi_Factor notebook for furhter details.</p>
 
 ### Bastion
-<p>For security, company's that use the Cloud environments will not allow direct access to Virtual Machines to developers, admins, etc..
-Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. For users who must access frequently, such as developer, the process can become cumbersome and tedious.
-The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to your favorite terminal access tool like MobaXterm.</p>
+>For security, company's that use the Cloud environments will not allow direct access to Virtual Machines to developers, admins, etc..
+>Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. >For users who must access frequently, such as developer, the process can become cumbersome and tedious.
+>The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to >your favorite terminal access tool like MobaXterm.
 
 
 <!-- CONTRIBUTING -->
