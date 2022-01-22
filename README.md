@@ -111,6 +111,7 @@ See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a fu
 [OCI CLI Docs](https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html)<br>
 [Python SDK docs](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html)<br>
 [Core Services](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/core.html)<br>
+[My Blog](https://blogs.oracle.com/cloud-infrastructure/post/open-doors-to-oracle-cloud-native-with-python-sdk)<br>
    <br>
 **Getting Started References**<br>
 [Learn OCI CLI  ](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/OCI_CLI)<br>
