@@ -34,20 +34,34 @@
 
 # Introduction
 
-Jupyter Notebooks developed for Cloud Environments - OCI:
-<p>The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
+   <p>Jupyter Notebooks developed for Cloud Environments - current focus is on Oracle Cloud (OCI):</p>
+   <p> The Jupyter Notebooks in this project gives anyone who wants to do cool stuff fast in the Cloud the means to do so by leveraging the knowlegde of a skilled Cloud developer.  Thereby giving useful insight into Cloud Environments (namely OCI) in a "real world" context.</p>
 
 ## Disclaimer
 <p>
-The opinions and techniques used in this repository are those of the author/contibuters and in no way meant to refelect the best practices and/or options of Oracle Corporation or any other entity.
+The opinions and techniques used in this repository are those of the author/contibuters and in no way meant to refelect the best practices or opinions of Oracle Corporation and will also not be supported by Oracle.
   </p>
+
+## Featured Notebooks
+
+### Authentication
+   <p>This Notebook can best be used to authenticate to OCI tenancy's that require multi-factor authentication of any form. Once authenticated, there are cells in the notebook to quickly refresh your session, which is nice to have since session typically have a time limit. There is also a repeating cell which will keep you session alive for hours, as needed.</p>
+
+### Bastion Ops
+   <p> This Notebook is very useful in creating Bastion Session for both Managed Server and Port Forwarding Servers. After a few configurations are made, sessions that ssh strings that are created have all the information needed to simply copy and paste to your xterm access tool. Port Forwarding which provides tunneling to VM servers is also included.</p>
+
+### Terraform Ops
+   <p>This Notebook provides an easy way to quickly create Terraform Stack, Jobs and Templates. Specifically designed for serverless function environments, a cell tool is in this notebook that will get the State of a Stack and transform the output to an organized report format. In addition, the tool will create a Resource Map that can used in a Metric Monitoring notebook this is currently being planned.
+  </p>
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project and Background
 
 <p>I started using Jupyter Notebook for Python development several years ago and found that it gave me enjoyment while coding in Python and so became my development platform of choice.</p>
 
-See Roadmap below for what is ready for use and what is now in process
+See Roadmap below for what is ready for use and what is now in progress
 
 ### Built With
 
@@ -67,28 +81,44 @@ I strongly recommend using Anaconda
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
- 
+TBD
 <!-- ROADMAP -->
 ## Roadmap
 
 - [x] OCI Authentication
-- [ ] OCI Bastion Session Manager
-- [ ] Terraform for Functions
+- [x] OCI Bastion Session Manager
+- [x] Terraform for Functions
 - [ ] Functions Monitor
-
-### Bastion
-For security, company's that use the Cloud environments will not allow direct access to Virtual Machines to developers, admins, etc..
-Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. For users who must access frequently, such as developer, the process can become cumbersome and tedious.
-The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to your favorite terminal access tool like MobaXterm.
 
 
 See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Insights
+<p>This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.</p>
+<p>For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.</p>
+<p>So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the OCI_Auth_Multi_Factor notebook for furhter details.</p>
+
+### Bastion
+>For security, company's that use the Cloud environments will not allow direct access to Virtual Machines to developers, admins, etc..
+>Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. >For users who must access frequently, such as developer, the process can become cumbersome and tedious.
+>The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to >your favorite terminal access tool like MobaXterm.
+
+## References
+
+**Reference Document Links:**<br>
+[OCI CLI Docs](https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html)<br>
+[Python SDK docs](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html)<br>
+[Core Services](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/core.html)<br>
+[My Blog](https://blogs.oracle.com/cloud-infrastructure/post/open-doors-to-oracle-cloud-native-with-python-sdk)<br>
+   <br>
+**Getting Started References**<br>
+[Learn OCI CLI  ](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/OCI_CLI)<br>
+[Learn DevOps Resource Manager](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Resource_Manager)<br>
+[Learn DevOps Terraform](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Terraform)<br>
+[Example Python SDK - showoci](https://github.com/oracle/oci-python-sdk/tree/master/examples/showoci)<br>
+[Learn DevOps Container Registry  ](https://github.com/oracle/learning-library/tree/master/oci-library/DevOps/Container_Registry) <br>
 
 
 
@@ -112,17 +142,12 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@waters262](https://twitter.com/waters262) - waters262@gmail.com
+Kevin Waters - [@waters262](https://twitter.com/waters262) - waters262@gmail.com
 
 Project Link: [https://github.com/waters262/JupyterCloud](https://github.com/waters262/JupyterCloud)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- Comments on Project -->
-## Project Comments
-<p>This series of Jupyter Notebooks is meant to provide a user with insight into Cloud Environments (namely OCI) in a "real world" context.</p>
-<p>For example, a realistic way of authenticating into most major corporate cloud environment is by using Multi-Factor Authentication which requires some kind of physical interaction in order to gain access.  This can be overcome by using Instance Principals, however, an Instance Principal requires that you operate on a Cloud VM, which is inconvienent and requires much time to set up.  It is far better to use ones own desktop or laptop.</p>
-So that these notebooks can operate in any environment, an Authentication notebook is made available to easily authenticate to your tenancy and stay authenticated for as long as you like.  See the OCI_Auth_Multi_Factor notebook for furhter details.
 
 
 
