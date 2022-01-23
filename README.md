@@ -80,6 +80,12 @@ This is an example of how to list things you need to use the software and how to
 - [ ] Terraform for Functions
 - [ ] Functions Monitor
 
+### Bastion
+For security, company's that use the Cloud environments will not allow direct access to Virtual Machines to developers, admins, etc..
+Instead they provide Bastion Services for access to VM's. This is good practice, however, it forces users to go through a process to obtain time limited tokens for access. For users who must access frequently, such as developer, the process can become cumbersome and tedious.
+The requested notebook will facilitate the process by using the Python SDK to create a Bastion Session and an 'ssh' connection string from which to copy, then paste to your favorite terminal access tool like MobaXterm.
+
+
 See the [open issues](https://github.com/waters262/JupyterCloud/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
