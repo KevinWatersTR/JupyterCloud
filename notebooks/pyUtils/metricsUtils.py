@@ -35,10 +35,13 @@ def print_apiGtw_metrics_data(metricsData,deployment,myTimezone):
             continue
 def print_apiGtw_metrics_data_table(metricsData,deployment,myTimezone):
     beginMatrix = "\\begin{array}{|c|c|} \hline"
-    matrixHeader =" {\\small  \\textbf{Timestamp} }  & {\\small  \\textbf{Qty}} \\\[2pt]"
+    matrixHeader =" \\overset{\\large{\\textbf{Timestamp}}} {\\tiny \\textbf{(" + \
+        myTimezone+ " Time Zone)}} "   + \
+        " & {\\small  \\textbf{Qty}} \\\[2pt]"
     newMatrix =  beginMatrix + " \hline "  + matrixHeader
     endMatrix = "  \end{array} "
     datapointsCnt = 0
+    qtySum = 0.0
     for metrics in metricsData:
         try:
             if deployment in metrics.dimensions['deploymentName']:
@@ -48,17 +51,21 @@ def print_apiGtw_metrics_data_table(metricsData,deployment,myTimezone):
                     if datapoints.value > 0:
                         datapointsCnt += 1
                         timestamp = datapoints.timestamp.astimezone(pytz.timezone(myTimezone))
-                        dtTime = timestamp.strftime("%m/%d/%Y %I:%M %p %Z")
+                        dtTime = timestamp.strftime("%m/%d/%Y %I:%M %p")
                         matrixRow = "{\\scriptsize \\textsf{"+ dtTime + "}} " + \
                                     "& {\\scriptsize \\textsf{" + str(datapoints.value) + "}} \\\[1pt] "
                         newMatrix = newMatrix + matrixRow
+                        qtySum = qtySum +  datapoints.value
                         # print (timestamp.strftime("%m/%d/%Y %I:%M %p %Z") + '  value: ' + str(datapoints.value))
         except:
             continue
     if datapointsCnt == 0:
         newMatrix = newMatrix + " {\\scriptsize \\textsf{ No Data}} & {\\tiny -} \\\[1pt] "
-    return newMatrix + " \hline "  + endMatrix
-
+        return newMatrix + " \hline "  + endMatrix
+    else:
+        totalRow = " {\\small \\textsf{ Total}} & {\\small "+str(qtySum)   +"} \\\[1pt] "
+        return newMatrix + " \hline "  + totalRow + " \hline " + endMatrix
+    
 
 def get_metrics_list(compartmentId,namespace,monitoring_client):
     metricList = []
@@ -125,3 +132,91 @@ def get_speedometer_resource_map(resourceMapFile):
         data = f.read()
     resourceMap = json.loads(data)
     return resourceMap
+def print_multi_metrics_data_table(metricsData,metricsDataDuration,
+                                  myTimezone,minDurationTime):
+    # MIN_DURATION_TIME = 2  # in seconds, this eliminates metrics from invoke retries
+    beginMatrix = "\\begin{array}{|c|c|} \hline"
+    matrixHeader =" \\overset{\\large{\\textbf{Timestamp}}} {\\tiny \\textbf{(" + \
+        myTimezone+ " Time Zone)}} "   + \
+        " & \\overset{\\large \\textbf{Qty}}{ \\tiny \\textbf{(Sum)}    } " + \
+        " & \\overset{\\overset{\\large{\\textbf{Average}}}{\\large{\\textbf{Duration}}}} " + \
+        " {\\tiny \\textbf{(Seconds)}} " + \
+        "  \\\[2pt]"
+    newMatrix =  beginMatrix + " \hline "  + matrixHeader
+    endMatrix = "  \end{array} "
+    datapointsCnt = 0
+    durDatapointsCnt =0
+    qtySum =0.0
+    avgSum = 0.0
+    for metrics in metricsData:
+        for datapoints in metrics.aggregated_datapoints:
+            if datapoints.value > 0:
+                datapointsCnt += 1   
+                timestamp = datapoints.timestamp.astimezone(pytz.timezone(myTimezone))
+                # Merge Metric Data Point
+                for durMetric in metricsDataDuration:
+                    for durDatapoints in durMetric.aggregated_datapoints:              
+                        durTimestamp = durDatapoints.timestamp.astimezone(pytz.timezone(myTimezone))
+                        if durTimestamp == timestamp :
+                            break             
+                
+                dtTime = timestamp.strftime("%m/%d/%Y %I:%M %p")
+                metCntValue =  str(datapoints.value)
+                if durDatapoints.value/1000 > minDurationTime:
+                    metDurValue =   "{:.2f}".format(durDatapoints.value/1000)
+                    durDatapointsCnt += 1
+                    avgSum = avgSum + durDatapoints.value/1000
+                else:
+                    metDurValue = "-"
+                matrixRow = "{\\scriptsize \\textsf{"+ dtTime + "}} " + \
+                            "& {\\scriptsize \\textsf{" + metCntValue + "}} " + \
+                            "& {\\scriptsize \\textsf{" + metDurValue + "}}" + \
+                            " \\\[1pt] "
+                newMatrix = newMatrix + matrixRow
+                qtySum = qtySum  +  datapoints.value
+        break   # Break after first metric since other one is for Errors             
+    if datapointsCnt == 0:
+        newMatrix = newMatrix + " {\\scriptsize \\textsf{ No Data}} & {\\tiny -} \\\[1pt] "
+        return newMatrix + " \hline " + endMatrix
+    else:
+        if durDatapointsCnt == 0:
+            totalRow = " {\\small \\textsf{ Total}} & {\\small "+str(qtySum) + "} "  + \
+                    " & {\\small - } \\\[1pt] "
+        else:
+            totalRow = " {\\small \\textsf{ Total}} & {\\small "+str(qtySum) + "} "  + \
+                        " & {\\small " +"{:.2f}".format(avgSum/durDatapointsCnt) + "} \\\[1pt] "
+        return newMatrix + " \hline "  + totalRow + " \hline " + endMatrix
+
+def get_resource_header(topic,title1,title2):
+    resHeader = """ 
+$
+\hspace {1mm} \\small {\\textbf{TOPIC}   } \\\[3pt]
+\hspace {10mm} {\\scriptsize \\textbf{TITLE1}} \\\[1pt]
+\hspace {10mm} {\\tiny \\textbf{TITLE2}} \\\[3pt]
+$
+"""
+    resHeader = resHeader.replace('TOPIC',topic)
+    resHeader = resHeader.replace('TITLE1',title1 )
+    resHeader = resHeader.replace('TITLE2', title2)
+    return resHeader
+
+def get_report_header(env, module, startTime, endTime):
+    reportHeader = """ 
+$
+\hspace {1mm} \\Large {\\textbf{ENV Environment Metrics Report}} \\\[3pt] 
+\hspace {60mm} \\small {\\textbf{MODULE Activity}   } \\\[6pt]
+\hspace {1mm} {\\scriptsize \\textbf{Start Time:  START  }} \\\[2pt]
+\hspace {1mm} {\\scriptsize \\textbf{End Time :  END  }} \\\[1pt]
+$
+"""
+    reportHeader=  reportHeader.replace('ENV',env)
+    reportHeader=  reportHeader.replace('MODULE',module)
+    reportHeader = reportHeader.replace('START',  
+                                  startTime.strftime("%m/%d/%Y %I:%M %p %Z")  )
+    reportHeader = reportHeader.replace('END',  
+                                  endTime.strftime("%m/%d/%Y %I:%M %p %Z") )
+    return reportHeader
+
+
+
+   
